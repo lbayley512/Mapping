@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation Project</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="map.js" defer></script>
+    
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+   <style>
+    #map { 
+        height: 700px;
+        
+    }
+    #map::before{
+        content: 'LOADING';
+        font-size: 3em;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        margin-top: 3em;
+    }
+    .leaflet-popup-content-wrapper {
+        width: 100%;
+    }
+  </style>
+</head>
+<body>
+   <main>
+    <label for="business-select">Selet a business in your area: </label>
+    <form>
+    <select name="select" id="business-select">
+        <option valiue="coffee">Coffee Shops</option>
+        <option valiue="restaurant">Restaurants</option>
+        <option valiue="hotel">Hotels</option>
+        <option valiue="market">Markets</option>
+    </select>
+    <button type="submit" id="submit-business">Search</button>
+    </form>
+    <section id="map">
+        
+    </section>
+    
+   </main>
+</body>
+<!-- Goals 
+What events will your application need?
+    - what is the user going to need to do?
+    - How should the app respond to this?
+What APIs will you need and in what order?
+- leaflet
+-foursquare
+     - How do i know which order they need to be used in?
+     - what api do i connect to in orrder to prompt the user for their location? leaflet
+How will you obtain the user's location?
+    - research
+How will you add the user's location to the map?
+    - research
+How will you get the selected location from the user?
+    - using a submit button with the drop down menu
+How will you add that information to the map?
+    - use foursquare api to obtain the businesses.
+
+-->
+</html>
